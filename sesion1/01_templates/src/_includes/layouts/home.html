@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+    <h1>Ejemplo de uso de layouts</h1>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.name }} {{ item.surname }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
