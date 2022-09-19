@@ -1,0 +1,15 @@
+{% set ctaPrefix = cta %}
+
+{% if ctaContent %}
+    {% set ctaPrefix = ctaContent %}
+{% endif %}
+
+<article>
+    <div>
+        <h2>{{ ctaPrefix.title }}</h2>
+        <p>{{  ctaPrefix.summary }}</p>
+    </div>
+    <div>
+        <a class="button" href="{{ ctaPrefix.buttonUrl }}">{{ ctaPrefix.buttonText }}</a>
+    </div>
+</article>
