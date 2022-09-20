@@ -1,0 +1,19 @@
+---
+pagination:
+    data: demodata
+    size: 2
+demodata:
+    - elm1
+    - elm2
+    - elm3
+    - elm4
+    - elm5
+    - elm6
+    - elm7
+permalink: "demodata/{{ pagination.items[0] | slug }}/index.html"
+---
+<ul>
+{% for item in pagination.items %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
