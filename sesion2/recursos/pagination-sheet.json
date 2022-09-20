@@ -1,0 +1,21 @@
+{
+  items: [], // Array of current page’s chunk of data
+  pageNumber: 0, // current page number, 0 indexed
+
+  // Cool URLs
+  hrefs: [], // Array of all page hrefs (in order)
+  href: {
+    next: "…", // put inside <a href="">Next Page</a>
+    previous: "…", // put inside <a href="">Previous Page</a>
+    first: "…",
+    last: "…",
+  },
+
+  pages: [], // Array of all chunks of paginated data (in order)
+  page: {
+    next: {}, // Next page’s chunk of data
+    previous: {}, // Previous page’s chunk of data
+    first: {},
+    last: {}},
+  }
+}
