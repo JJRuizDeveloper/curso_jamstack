@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+
+{% set pageHeaderSummary %}
+    <time datetime="{{ date }}">{{ date | dateFilter }}</time>
+    {% if tags %}
+        <p>Tags</p>
+        <ul>
+            {% for tag in tags %}
+            <li>
+                <a href="/tag/{{ tag | slug }}/">{{ tag }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endset %}
+
+{% block content %}
+<article>
+    {% include "partials/page-header.html" %}
+    <div>
+        {{  content | safe }}
+    </div>
+</article>
+{% endblock %}

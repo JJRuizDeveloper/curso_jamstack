@@ -1,0 +1,14 @@
+<article>
+    <div>
+        <h2>{{ featuredWork.title }}</h2>
+        <p>{{ featuredWork.summary }}</p>
+    </div>
+    {% for item in collections.featuredWork %}
+        <a href="{{ item.url }}">
+           <img src="{{ item.data.hero.image }}" alt="{{ item.data.hero.imageAlt }}" />
+        </a>
+    {% endfor %}
+    <div>
+        <a href="/work/" class="button">See more works</a>
+    </div>
+</article>

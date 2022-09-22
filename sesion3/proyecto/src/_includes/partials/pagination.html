@@ -1,0 +1,12 @@
+{% if pagination.href.next or pagination.href.previous %}
+<footer>
+    <div>
+        {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}{{ paginationAnchor }}">{{ paginationPrevText }}</a>
+        {% endif %}
+        {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}{{ paginationAnchor }}">{{ paginationNextText }}</a>
+        {% endif %}
+    </div>
+</footer>
+{% endif %}

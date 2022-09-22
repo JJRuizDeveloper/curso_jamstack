@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+{% set postListItems = pagination.items %}
+
+{% if tag %}
+    {% set postListItems = collections[tag] %}
+    {% set pageHeaderTitle = 'Post about ' + tag %}
+{% endif %}
+
+{% block content %}
+    <article>
+        {% include "partials/page-header.html" %}
+        {% include "partials/post-list.html" %}
+
+        {% if not tag %}
+            {% include "partials/pagination.html" %}
+        {% endif %}
+    </article>
+{% endblock %}

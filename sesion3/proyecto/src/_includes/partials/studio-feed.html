@@ -1,0 +1,21 @@
+{% if studio.length %}
+<article>
+    <div>
+        <h2>
+            {{ studioFeed.title }}
+        </h2>
+        <p>
+            {{ studioFeed.summary }}
+        </p>
+    </div>
+    <div>
+        <ul>
+            {% for item in studio %}
+            <li>
+                <img src="http://127.0.0.1:8055/assets/{{ item.medium }}" alt="{{  item.alt }}" />
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</article>
+{% endif %}

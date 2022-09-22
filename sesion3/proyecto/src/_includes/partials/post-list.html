@@ -1,0 +1,16 @@
+<div id="post-list">
+    <div>
+        {% if postListHeadline %}
+        <h2>
+            {{ postListHeadline }}
+        </h2>
+        {% endif %}
+    </div>
+    <ul>
+        {% for item in postListItems %}
+            <li>
+                <a href="{{ item.url }}">{{ item.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
