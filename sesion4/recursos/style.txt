@@ -1,0 +1,48 @@
+    .control-container {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: $bgColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .teacher-form {
+        padding: 0;
+        border-radius: 10px;
+        background-color: white;
+        width: 30%;
+    }
+
+    .teacher-header {
+        height: 40px;
+        background-color: $primaryColor;
+        color: white;
+        padding: 5px;
+        text-transform: uppercase;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .input-teacher {
+        width: 98%;
+        margin: 5px;
+        height: 25px;
+        border-radius: 5px;
+        outline: 0;
+        border: 1px solid $textColor;
+        padding: 5px;
+    }
+
+    .btn {
+        background-color: $primaryColor;
+        color: white;
+        padding: 10px 5px;
+        border-radius: 5px;
+        border: 1px solid $primaryColor;
+        margin: 5px;
+    }
+
+    .btn:hover {
+        background-color: white;
+        color: $primaryColor;
+    }
